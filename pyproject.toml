@@ -3,10 +3,11 @@ name = "metalflare"
 version = "2025.5.29"
 description = "Investigating metal-sensing green fluorescent protein"
 authors = [
-    {name = "OASCI", email = "us@oasci.org"}
+    {name = "Alex Maldonado", email = "alex.maldonado@pitt.edu"},
+    {name = "Durrant Lab", email = "durrantj@pitt.edu"},
 ]
 maintainers = [
-    {name = "Alex Maldonado", email = "alex@oasci.org"}
+    {name = "Durrant Lab", email = "durrantj@pitt.edu"},
 ]
 readme = "README.md"
 requires-python = ">=3.11"

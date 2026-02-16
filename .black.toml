@@ -1,6 +1,6 @@
 [tool.black]
 target-version = [
-    "py312",
+    "py311",
 ]
 line-length = 88
 color = true

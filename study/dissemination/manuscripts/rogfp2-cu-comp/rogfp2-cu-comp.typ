@@ -37,7 +37,7 @@ Na#super[+] simulations use the same Cys metal-coordinated parameters without ad
 === Protein preparation
 
 Initial protein structures for reduced (#link("https://files.rcsb.org/download/1JC0.pdb")[1JC0]) and oxidized (#link("https://files.rcsb.org/download/1JC1.pdb")[1JC1]) states of roGFP2 @hanson2004investigating were retrieved from the Protein Data Bank (PDB). @berman2000protein
-The structures were processed using in-house Python and bash scripts (available free of charge at #link("github.com/oasci/metalflare")[github.com/oasci/metalflare]).
+The structures were processed using in-house Python and bash scripts (available free of charge at #link("github.com/durrantlab/metalflare")[github.com/durrantlab/metalflare]).
 The first chain, along with the crystallographic water molecules, were centered to the origin and rotated to minimize the box size using NumPy,@harris2020array SciPy,@virtanen2020scipy and MDAnalysis @michaud2011mdanalysis packages.
 
 Given the relevance and availability of the GFP mechanism's force field parameters, the chromophore was modeled in its anionic state.

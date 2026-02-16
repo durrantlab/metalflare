@@ -154,6 +154,5 @@ This verification allows identification of common construction errors such as im
 <!-- LINKS -->
 
 [cro-params-paper]: https://doi.org/10.1021/acs.jpcb.3c01486
-[frcmod.xFPchromophores.2022]: https://gitlab.com/oasci/studies/metalflare/-/blob/main/study/methods/03-tleap/cro/frcmod.xFPchromophores.2022
-[xFPchromophores.lib.2022]: https://gitlab.com/oasci/studies/metalflare/-/blob/main/study/methods/03-tleap/cro/xFPchromophores.lib.2022
-[cro-rcsb]: https://www.rcsb.org/ligand/CRO
+[frcmod.xFPchromophores.2022]: https://github.com/durrantlab/metalflare/blob/main/study/methods/03-tleap/cro/frcmod.xFPchromophores.2022
+[xFPchromophores.lib.2022]: https://github.com/durrantlab/metalflare/blob/main/study/methods/03-tleap/cro/xFPchromophores.lib.2022

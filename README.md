@@ -3,15 +3,14 @@
 <h4 align="center">Computational investigation of a Cu(I)-sensing green fluorescent protein</h4>
 
 <p align="center">
-    <a href="https://github.com/oasci/metalflare/releases">
-        <img src="https://img.shields.io/github/v/release/oasci/metalflare" alt="GitHub release (latest by date)">
+    <a href="https://github.com/durrantlab/metalflare/releases">
+        <img src="https://img.shields.io/github/v/release/durrantlab/metalflare" alt="GitHub release (latest by date)">
     </a>
-    <a href="https://github.com/oasci/metalflare/" target="_blank">
-        <img src="https://img.shields.io/github/repo-size/oasci/metalflare" alt="GitHub repo size">
+    <a href="https://github.com/durrantlab/metalflare/" target="_blank">
+        <img src="https://img.shields.io/github/repo-size/durrantlab/metalflare" alt="GitHub repo size">
     </a>
     <a href="https://doi.org/10.5281/zenodo.15549425"><img src="https://zenodo.org/badge/719581358.svg" alt="DOI"></a>
 </p>
-
 
 Metalflare is a computational study investigating the molecular mechanisms underlying copper(I) sensing by roGFP2, a genetically encoded fluorescent protein.
 This work combines molecular dynamics simulations with experimental validation to understand how roGFP2 achieves sub-femtomolar Cu(I) binding affinity and generates robust ratiometric fluorescence changes.
@@ -43,37 +42,27 @@ The resulting enhanced chromophore flexibility opens non-radiative decay pathway
 
 ## Getting Started
 
-This project uses [Pixi](https://prefix.dev/docs/pixi/) for reproducible environment management.
+This project uses [Pixi](https://pixi.prefix.dev/latest/) for reproducible environment management.
 You'll need to install Pixi first:
 
 ```bash
-curl -sSL https://prefix.dev/install.sh | bash
+curl -fsSL https://pixi.sh/install.sh | sh
 ```
 
 Clone the repository and set up the computational environment:
 
 ```bash
-git clone https://github.com/oasci/metalflare.git
+git clone git@github.com:durrantlab/metalflare.git
 cd metalflare
-pixi install
+pixi install --locked
 ```
 
 This installs Python along with all required dependencies including MDAnalysis, scientific computing libraries, and specialized tools like AmberTools and PyMOL for molecular analysis.
 
 ## License
 
-Code contained in this project is released under the [MIT][mit] as specified in [`LICENSE.md`](https://github.com/oasci/metalflare/blob/main/LICENSE.md).
-All other data, information, documentation, and associated content provided within this project are released under the [CC BY 4.0][cc-by-4.0] as specified in [`LICENSE_INFO.md`](https://github.com/oasci/metalflare/blob/main/LICENSE_INFO.md).
-
-## Web analytics
-
-We track website traffic using [plausible][plausible] which is privacy friendly, uses no cookies, and is compliant with [GDPR][gdpr], [CCPA][ccpa] and [PECR][pecr].
-We also share [this website's analytics with you][plausible-link] for more transparency.
+Code contained in this project is released under the [MIT][mit] as specified in [`LICENSE.md`](https://github.com/durrantlab/metalflare/blob/main/LICENSE.md).
+All other data, information, documentation, and associated content provided within this project are released under the [CC BY 4.0][cc-by-4.0] as specified in [`LICENSE_INFO.md`](https://github.com/durrantlab/metalflare/blob/main/LICENSE_INFO.md).
 
 [mit]: https://spdx.org/licenses/MIT.html
 [cc-by-4.0]: https://creativecommons.org/licenses/by/4.0/
-[plausible]: https://plausible.io
-[plausible-link]: https://plausible.io/metalflare.oasci.org
-[gdpr]: https://gdpr-info.eu/
-[ccpa]: https://oag.ca.gov/privacy/ccpa
-[pecr]: https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/what-are-pecr/

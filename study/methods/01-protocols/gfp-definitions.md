@@ -96,37 +96,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <h4 align="center">Computational investigation of a Cu(I)-sensing green fluorescent protein</h4>
 
 <p align="center">
-    <a href="https://github.com/oasci/metalflare/releases">
-        <img src="https://img.shields.io/github/v/release/oasci/metalflare" alt="GitHub release (latest by date)">
+    <a href="https://github.com/durrantlab/metalflare/releases">
+        <img src="https://img.shields.io/github/v/release/durrantlab/metalflare" alt="GitHub release (latest by date)">
     </a>
-    <a href="https://github.com/oasci/metalflare/" target="_blank">
-        <img src="https://img.shields.io/github/repo-size/oasci/metalflare" alt="GitHub repo size">
+    <a href="https://github.com/durrantlab/metalflare/" target="_blank">
+        <img src="https://img.shields.io/github/repo-size/durrantlab/metalflare" alt="GitHub repo size">
     </a>
 </p>
 
-
 TODO:
 
-
-## License
-
-Code contained in this project is released under the [MIT][mit] as specified in [`LICENSE.md`](https://github.com/oasci/metalflare/blob/main/LICENSE.md).
-All other data, information, documentation, and associated content provided within this project are released under the [CC BY 4.0][cc-by-4.0] as specified in [`LICENSE_INFO.md`](https://github.com/oasci/metalflare/blob/main/LICENSE_INFO.md).
-
-## Web analytics
-
-We track website traffic using [plausible][plausible] which is privacy friendly, uses no cookies, and is compliant with [GDPR][gdpr], [CCPA][ccpa] and [PECR][pecr].
-We also share [this website's analytics with you][plausible-link] for more transparency.
-
-[mit]: https://spdx.org/licenses/MIT.html
-[cc-by-4.0]: https://creativecommons.org/licenses/by/4.0/
-[plausible]: https://plausible.io
-[plausible-link]: https://plausible.io/metalflare.oasci.org
-[gdpr]: https://gdpr-info.eu/
-[ccpa]: https://oag.ca.gov/privacy/ccpa
-[pecr]: https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/what-are-pecr/
 [1jc0]: https://www.rcsb.org/structure/1jc0
 [1jc1]: https://www.rcsb.org/structure/1jc1
 [rogfp paper]: https://doi.org/10.1074/jbc.M312846200
 [2y0g]: https://www.rcsb.org/structure/2y0g
-[8dta]: https://www.rcsb.org/structure/8DTA

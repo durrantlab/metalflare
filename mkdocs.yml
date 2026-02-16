@@ -1,10 +1,10 @@
 docs_dir: study
 
 site_name: metalflare
-site_author: OASCI
+site_author: Durrant Lab
 
-repo_name: oasci/metalflare
-repo_url: https://github.com/oasci/metalflare
+repo_name: durrantlab/metalflare
+repo_url: https://github.com/durrantlab/metalflare
 edit_uri: edit/main/study/
 
 # https://squidfunk.github.io/mkdocs-material/
@@ -108,9 +108,6 @@ plugins:
 
 extra:
   generator: false
-  analytics:
-    provider: plausible
-    domain: metalflare.oasci.org
 
 extra_css:
   - css/base.css
