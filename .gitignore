@@ -69,6 +69,8 @@ psi.*.clean
 site
 public
 
+.DS_Store
+
 environment.yml
 report.xml
 
