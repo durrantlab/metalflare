@@ -28,7 +28,7 @@ colors_sys = {
 
 
 quantities_to_plot = {
-    r"Cys147 C$\alpha$ – Cys204 C$\alpha$": {
+    r"Cys147 CA – Cys204 CA": {
         "filename": "cys145_ca-cys202_ca-dist",
         "type": "distance",
         "xlims": (3.0, 7.0),
@@ -99,7 +99,6 @@ def load_raw_data(base_dir, path_sys, q_info):
     data = np.load(file_path)
 
     if q_info["type"] == "dihedral":
-        # If your angles are already in degrees, remove np.degrees
         data = np.degrees(data)
         # Duplicate ±360 for better continuity
         data = np.concatenate([data, data + 360, data - 360])
@@ -205,10 +204,19 @@ if __name__ == "__main__":
     n_buffer = 3
     n_rows = n_systems + n_buffer + 1  # 1 row for "other", plus 1 row per system
     fig = plt.figure(figsize=(7.0, 5.0))
-    gs = gridspec.GridSpec(
-        nrows=n_rows, ncols=n_ridge, bottom=0.075, top=0.99, left=0.09, right=0.98
+
+    gs_parent = gridspec.GridSpec(nrows=2, ncols=1, figure=fig, height_ratios=[1, 1.7], hspace=0.0, top=0.99, bottom=0.08, left=0.08, right=0.99)
+
+    gs_top = gridspec.GridSpecFromSubplotSpec(1, n_ridge, subplot_spec=gs_parent[0])
+
+    gs_ridge = gridspec.GridSpecFromSubplotSpec(
+        n_systems, len(ridge_keys) + 2,
+        subplot_spec=gs_parent[1],
+        hspace=-0.635,
+        wspace=0.2
     )
-    subfigure_label_counter = 0
+
+    subfigure_label_counter=0
 
     # -------------------------------------------------------------------------
     # C. Plot the "other" items (ridge=False) in row=0, distributing them across the n_ridge columns
@@ -223,7 +231,7 @@ if __name__ == "__main__":
             col_span = chunk_size + (1 if i < leftover else 0)
             col_end = col_start + col_span
             # Make a subplot that spans [row=0, col_start:col_end]
-            ax_other = fig.add_subplot(gs[0, col_start:col_end])
+            ax_other = fig.add_subplot(gs_top[0, col_start:col_end])
 
             # Retrieve data
             x_vals = data_all[label_data]["x_vals"]
@@ -268,11 +276,11 @@ if __name__ == "__main__":
     #
     # Row i_system+1, columns 0..n_ridge-1
     # Each cell is a separate subplot for that (system, ridge_item).
-    # We'll do a "filled" style (like your older ridgeline approach).
+    # We'll do a "filled" style
     # -------------------------------------------------------------------------
     for i_system, sys_lbl in enumerate(labels_sys_order):
         for j, label_data in enumerate(ridge_keys):
-            ax_ridge = fig.add_subplot(gs[i_system + n_buffer + 1, j])
+            ax_ridge = fig.add_subplot(gs_ridge[i_system, j])
 
             rect = ax_ridge.patch
             rect.set_alpha(0)
@@ -309,7 +317,6 @@ if __name__ == "__main__":
                     ax_ridge.set_xlabel("Distance from Cro66 (Å)", labelpad=-1)
 
             # If this is the leftmost column (j==0), we can label the system
-            # (like your text() usage or a y-axis label)
             if j == 0:
                 ax_ridge.text(
                     quantities_to_plot[label_data]["xlims"][0] - 0.2,
@@ -329,13 +336,13 @@ if __name__ == "__main__":
                     fontweight="normal",
                 )
                 add_subfigure_label(
-                    ax_ridge, quantities_to_plot[label_data]["label"], loc=(0.52, 0.7)
+                    ax_ridge,
+                    quantities_to_plot[label_data]["label"],
+                    loc=(-0.05, 0.67)
                 )
                 subfigure_label_counter += 1
 
-    fig.text(0.610, 0.501, "G", fontsize=12, fontweight="normal")
-
-    gs.update(hspace=-0.735)
+    fig.text(0.66, 0.534, "G", fontsize=12, fontweight="normal")
 
     plt.savefig("fig002.svg")
 
@@ -346,8 +353,8 @@ if __name__ == "__main__":
         "5in",
         compose.SVG("fig002.svg", fix_mpl=True),
         compose.SVG("gfp-relevant-residues.svg")
-        .scale(0.65)
-        .move(313, 177),  # adjust scale & position
+        .scale(0.68)
+        .move(328, 162),
     ).save("fig002.svg")
 
     tree = ET.parse("fig002.svg")

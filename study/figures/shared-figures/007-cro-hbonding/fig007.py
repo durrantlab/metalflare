@@ -11,8 +11,6 @@ from metalflare.analysis.figures import use_mpl_rc_params
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-# If you want to use your custom style:
-# from metalflare.analysis.figures import use_mpl_rc_params
 
 ###############################################################################
 # 1) DEFINE YOUR PLOT CONFIGURATIONS
